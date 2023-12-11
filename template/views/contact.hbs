@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    {{>links}}
+<body>
+    <div class="container black father">
+        {{>nav}}
+        <!-- ###################### this is jabout page ################ -->
+        <div class="contact-page">
+            <h1 class="md-heading text-center capitalize fw-400 green">contact me</h1>
+            <form method="POST" action="/contact">
+                <div class="input-field">
+                    <label for="">Name</label>
+                    <input class="input" type="text" placeholder="enter your name ">
+                </div>
+                <div class="input-field">
+                    <label for="">E-mail</label>
+                    <input class="input" type="text" placeholder="enter your e-mail">
+                </div>
+                <div class="input-field">
+                    <label for="">Phone Number</label>
+                    <input class="input" type="text" placeholder="enter your Phone Number">
+                </div>
+                <div class="input-field">
+                    <label for="">Address</label>
+                    <input class="input" type="text" placeholder="Enter your Address">
+                </div>
+                <div class="input-field">
+                    <label for="">Feedback</label>
+                    <!-- <input type="text" placeholder="enter your name "> -->
+                    <textarea class="input" name="" id="" placeholder="Enter your Feedback"></textarea>
+                </div>
+
+                <a href="#" class="primary-btn" id="form-btn">submit my feedback</a>
+            </form>
+        </div>
+
+
+        {{>footer}}
+    </div>
+    <script>
+        const formBtn = document.querySelector("#form-btn");
+        let inputBag = document.querySelectorAll(".input-field .input");
+        inputBag = Array.from(inputBag);
+        const form = document.querySelector("form");
+        
+
+        function check(){
+            inputBag = Array.from(inputBag);
+            for(let i = 0;i<inputBag.length;i++){
+                if(inputBag[i].value === ""){
+                    return false;
+                }
+            }
+            return true;
+        }
+        formBtn.addEventListener("click" , ()=>{
+            if(check()){
+                const bag = [];
+                for(let i = 0;i<inputBag.length;i++){
+                    bag.push(inputBag[i].value);
+                }
+
+                alert(`Hello ${bag[0]} , your email is ${bag[1]} and you mobile number is : ${bag[2]} , and i will work on your given feedback ....`);
+                for(let i = 0;i<inputBag.length;i++){
+                    inputBag[i].value="";
+                }
+            }else{
+                alert("Fill all the fields sir/madam .")
+            }
+        })
+        
+    </script>
+</body>
+</html>

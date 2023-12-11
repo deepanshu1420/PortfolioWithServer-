@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+{{>links}}
+<body>
+    <div class="container black father">
+        {{>nav}}
+
+        <div class="main-content">
+            <div class="box1">
+                <h1 class="lg-heading capitalize">
+                    i am {{text}} <span class="green">developer</span>
+                </h1>
+                <p>"I strive to deliver top-tier software solutions, mentoring emerging engineers, and exploring cutting-edge technologies. Committed to AI, innovation, and organizational empowerment."</p>
+                <div class="btns">
+                    <a href="contact" class="primary-btn fw-400">contact</a>
+                    <a href="about" class="primary-btn fw-400">about</a>
+                </div>
+            </div>
+            <div class="box2">
+                <img src="./images/img3.svg" alt="later on">
+            </div>
+        </div>
+
+        {{!-- <h2 class="md-heading capitalize fw-400">below is the dynamic data rendering</h2> --}}
+        <h2 class="text-center md-heading fw-400 capitalize">social media power</h2>
+
+        <div class="video-box md-heading">
+            <video src="./images/vid1.mp4" autoplay loop muted></video>
+        </div>
+        
+        {{!-- <p class="footer">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem amet accusantium quos nobis facere deserunt ,@copyright 2023</p> --}}
+        {{>footer}}
+    </div>
+</body>
+</html>

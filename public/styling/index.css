@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+:root{
+    font-size: 62.5%;
+    color : #1e272e;
+    font-family: 'Poppins', sans-serif;
+}
+.black{
+    color : #1e272e;
+}
+.green{
+    color : #05c46b;
+}
+ul li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color : #1e272e;
+}
+li , a , p{
+    font-size : 1.6rem;
+    text-transform: capitalize;
+}
+.container{
+    max-width : 1200px;
+    width : 90%;
+    margin : auto;
+}
+.lg-heading{
+    font-size: 7.2rem;
+}
+.md-heading{
+    font-size: 3.6rem;
+}
+.normal-text{
+    font-size : 1.4rem;
+}
+.small-text{
+    font-size : 1.4rem;
+}
+.capitalize{
+    text-transform: capitalize;
+}
+.text-center{
+    text-align: center;
+}
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding : 3em 0;
+}
+.nav-items{
+    display: flex;
+    align-items: center;
+    gap : 3rem;
+}
+.main-content{
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height : 75vh;
+}
+.nav-items a:hover{
+    border-bottom: 4px solid #05c46b;
+}
+.fw-300{
+    font-weight : 300;
+}
+.fw-400{
+    font-weight: 400;
+}
+.fw-500{
+    font-weight: 500;
+}
+.box1 , .box2{
+    width : 45%;
+}
+.box2{
+   /* border: 2px solid red; */
+   height : 40rem;
+   overflow: hidden;
+   animation-name: animate;
+   animation-timing-function: ease-in-out;
+   animation-duration: .6s;
+   animation-fill-mode: forwards;
+   animation-direction: alternate;
+   animation-iteration-count: infinite;
+}
+@keyframes animate{
+    0%{
+        translate : scale(.8);
+    }100%{transform: scale(1.05);}
+}
+.box2 img{
+    width : 100%;
+    height : 100%;
+}
+.box1 p{
+    margin : 1rem 0;
+    line-height: 2.8rem;
+}
+.primary-btn{
+    background-color: #05c46b;
+    color : white;
+    padding : .8em 3em;
+    border-radius: .4rem;
+}
+.btns{
+    /* border: 2px solid red; */
+    width : 65%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+form{
+    /* border: 2px solid red; */
+    width : 60%;
+    margin : auto;
+    margin-top: 1rem;
+    /* padding: 1em; */
+}
+.input-field{
+    /* border: 2px solid green; */
+    margin-bottom: 2rem;
+
+}
+label{
+    display: block;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+    color : #05c46b;
+    font-size: 1.6rem;
+    font-weight: 500;
+
+}
+.input-field input{
+    width : 100%;
+    display: block;
+    padding: 1.2em;
+    text-transform: capitalize;
+    letter-spacing: .05em;
+    border: none;
+    outline: none;
+    border-radius: .8rem;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.201);
+}
+textarea{
+    display: block;
+    width : 100%;
+    border: none;
+    outline: none;
+    height : 15rem;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.201);
+    margin-bottom: 1rem;
+    padding: 1.2em;
+    text-transform: capitalize;
+}
+
+.service-box{
+    /* border : 2px solid red; */
+    padding : 5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    
+}
+.service-text-box{
+    /* border: 2px solid red; */
+    position : absolute;
+    top : -50%;
+    left : 50%;
+    width : 100%;
+    transform: translate(-50% ,-50%);
+    /* height : 100%; */
+    color : white;
+    text-align: center;
+    z-index : 5;
+    transition: all .4s ease-in-out;
+    /* animation-name: animate; */
+}
+.service-btn{
+    border: 2px solid #05c46b;
+    display: inline-block;
+    margin : 1rem 0;
+    padding : .3em 1.8em;
+    color : white;
+    border-radius: 1rem;
+}
+.servicebox::after{
+    content : "";
+    display: block;
+    background-color: rgba(0, 0, 0, 0.844);
+    position: absolute;
+    top : 0;
+    left : -110%;
+    width : 100%;
+    height : 100%;
+    transition: all .4s ease-in-out;
+
+}
+.servicebox:hover::after{
+    left : 0;
+}
+.servicebox:hover .service-text-box{
+    top : 50%;
+}
+.service-text-box p{
+    font-weight : 200;
+    line-height: 2.8rem;
+    font-size: 1.4rem;
+}
+.servicebox{
+    /* border : 2px solid green; */
+    width : 30%;
+    height : 35rem;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 8px rgba(128, 128, 128, 0.377);
+    position: relative;
+
+}
+.servicebox img{
+    display: block;
+    width : 100%;
+    height : 100%;
+    object-position: center;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+.skill-box{
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding : 4em 0;
+}
+.skill-box .sbox{
+    width : 30%;
+    height : 45rem;
+    /* border: 2px solid black; */
+    border-radius: .8rem;
+    box-shadow: 0px 0px 5px rgba(128, 128, 128, 0.755);
+    overflow: hidden;
+
+}
+.sbox img{
+    display: block;
+    width : 100%;
+    height : 50%;
+    object-fit: cover;
+    object-position: center;
+}
+.sbox .text-box{
+    padding : 1em;
+    font-weight: 400;
+}
+.sbox .text-box h2{
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.text-box p{
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.6rem;
+}
+
+.text-box a{
+    /* margin-top : 5rem; */
+    display: inline-block;
+    border: 2px solid #05c46b;
+    padding : .4em 1.6em;
+    margin-top: 1rem;
+    font-weight: 600;
+    border-radius: 2rem;
+    
+
+}
+form a{
+    display: block;
+    margin-top: 1rem;
+    text-align: center;
+}
+.skill-intro{
+    box-shadow: 0px 0px 8px rgba(128, 128, 128, 0.492);
+    margin : 2rem 0;
+    border-radius: 1rem;
+    padding: 2em;
+    
+}
+
+
+.skill-intro p{
+    line-height: 3.2rem;
+    font-size: 1.4rem;
+}
+.father{
+    width : 100%;
+    min-height : 100vh;
+    display: flex;
+    flex-direction: column;
+}.footer{
+    margin-top : auto;
+    /* background-color: #05c46b; */
+    padding: 2em 0;
+    text-align: center;
+    font-weight : 400;
+}
+
+.video-box{
+    /* border : 4px solid red; */
+    overflow: hidden;
+    height : 65vh;
+    border-radius: 2rem;
+    margin-top: 3rem;
+}
+
+.video-box video{
+    width : 100%;
+    height : 100%;
+    object-fit: cover;
+    object-position: center;
+}
+@media (max-width : 500px) {
+    :root{
+        font-size: 6.5px;
+    }
+    
+    form{
+        width : 85%;
+    }
+    .nav-bar{
+        flex-direction: column;
+    }
+    .logo{
+        margin-bottom : 1rem;
+    }
+
+    .service-box{
+        flex-direction: column;
+    }
+    .servicebox{
+        width : 85%;
+        height : auto;
+        margin-bottom: 2.5rem;
+    }
+    .skill-box{
+        flex-direction: column;
+    }
+    .skill-box .sbox{
+        width : 85%;
+        height : auto;
+        text-align: center;
+        margin-bottom: 2.5rem;
+    }
+    .main-content{
+        flex-direction: column;
+        height : auto;
+    }
+    .box1 , .box2{
+        width : 88%;
+        height : auto;
+        text-align: center;
+    }
+    .box1{
+        order : 1;
+    }
+    .main-box2 video{
+        width : 100%;
+        height : 100%;
+        object-fit: cover;
+    }
+    .video-box{
+        border: 2px soid red;
+        background-color: red;
+        width : 100%;
+        height : 40vh;
+    }
+    .main-contents{
+        width : 100%;
+        height : 50vh;
+        border: 2px solid red;
+    }
+    .main-box2{
+        width : 100%;
+        /* height : 50vh; */
+        height : 100%;
+        border : 2px solid red;
+    }
+    .box2{
+        order : 0;
+        margin : 3rem 0;
+    }
+    .main-content .btns{
+        width : 100%;
+    }
+    .main-content .box1 p{
+        width : 100%;
+    }
+}
+
