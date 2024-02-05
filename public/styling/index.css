@@ -70,7 +70,10 @@ li , a , p{
     justify-content: space-between;
     height : 75vh;
 }
-.nav-items a:hover{
+/* .nav-items a:hover{
+    
+} */
+.green-border{
     border-bottom: 4px solid #05c46b;
 }
 .fw-300{
